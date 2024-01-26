@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NiggerWeb</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 class="text">NiggerWeb</h1>
+    <p class="text">If you want to change this page, message <a class="link" href="https://discord.com/users/trident_420" target="_blank">@trident_420 on Discord</a>.</p>
+    <br>
+    <div class="user-box">
+        <p class="move-text" id="usrtxt">HELLO AND WELCOME</p>
+    </div>
+    <script type="text/javascript">
+    	setInterval(function test() {
+    		const element = document.getElementById("usrtxt");
+    		const myRequest = new Request("http://7.tcp.eu.ngrok.io:18057/text.txt");
+    		fetch(myRequest)
+    			.then(function setstum(value) {value.text().then(function tntnbb(data) {element.textContent = data})})
+    	}, 5000);
+    </script>
+</body>
+</html>
