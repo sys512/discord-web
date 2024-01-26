@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits, SlashCommandBuilder } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
-const token = 'MTIwMDQ0MjIzMTYyMzAwNDE2MA.GGp3Vu.6EhTE7EGlZBEDcjrFVPHRstIVZKQOpWYG-pMpQ';
+const token = 'token';
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
 });
@@ -29,7 +29,7 @@ client.on('interactionCreate', async (interaction) => {
 client.login(token);
 
 client.on('ready', () => {
-  rest.put(Routes.applicationGuildCommands(client.application.id, '1200441909294936145'), { body: [{
+  rest.put(Routes.applicationGuildCommands(client.application.id, 'guild-id'), { body: [{
     name: 'textchg',
     description: 'Prints out the text variable in the Node.js command line',
     options: [{
